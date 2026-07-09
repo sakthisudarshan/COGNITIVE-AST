@@ -59,7 +59,7 @@ jobs:
         env:
           PROJECT_NAME: fastapitiangolo
           BRANCH: ${{ ( github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'master' && 'main' ) || ( github.event.workflow_run.head_sha ) }}
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
